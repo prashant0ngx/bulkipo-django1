@@ -34,7 +34,7 @@ Once the environment is activated, you will see this result in the command promp
 
 Change Directory to Project:
 
-`cd bulkipo-django/bulkipoapplier`
+`cd bulkipo-django-private/bulkipoapplier`
 
 
 You can install all the required dependencies by running below command:
