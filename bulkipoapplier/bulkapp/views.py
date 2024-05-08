@@ -100,8 +100,9 @@ def applyipo(request):
                 else:
                     messages.error(request,'Could Not Login ! Check your credentials')
                     return redirect('/applyipo/')
-            except:
+            except Exception as e:
                 messages.error(request,'Timeout Error ! Try again later')
+                print(e)
                 web_driver.close_browser()
                 return redirect('/applyipo/')
         else:
@@ -132,7 +133,6 @@ def applyshareid(request):
                 ipo_selector(shareId)
             except:
                 messages.error(request,'Looks like you have already applied for this IPO \n Or No IPOS Avalable')
-                
                 return redirect('/applyipo/')
             try:
                 apply_success(qty, crn, pin)
@@ -145,8 +145,9 @@ def applyshareid(request):
                     messages.error(request, msg)
                    
                     return redirect('/applyipo/') 
-            except:
+            except Exception as e:
                 messages.error(request,'Could not apply for this IPO')
+                print(e)
                   
         return redirect('/applyipo/')
     else:

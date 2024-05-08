@@ -46,9 +46,6 @@ class web_driver():
             cls.driver.quit()
             cls.driver = None
 
-
-
-
 def login(dp,username,password):
     web_driver.wait.until(EC.presence_of_element_located((By.TAG_NAME, "app-login")))
     # Login
