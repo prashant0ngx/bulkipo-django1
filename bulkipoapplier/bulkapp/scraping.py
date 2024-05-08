@@ -20,7 +20,7 @@ class web_driver():
         #django set options for webdriver
         options = webdriver.ChromeOptions()
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
-        options.headless = False # run in background
+        options.headless = True # run in Foreground
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--window-size=1920x1080')
