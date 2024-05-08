@@ -21,7 +21,7 @@ class web_driver():
         options = webdriver.ChromeOptions()
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
         # Set headless mode to True for background running
-        options.headless = True
+        options.headless = False
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--window-size=1920x1080')
