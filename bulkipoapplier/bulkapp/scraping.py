@@ -20,10 +20,16 @@ class web_driver():
         #django set options for webdriver
         options = webdriver.ChromeOptions()
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
-        options.headless = True # run in Foreground
+        # Set headless mode to True for background running
+        options.headless = True
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--window-size=1920x1080')
+        options.add_argument("--disable-extensions")
+        # Disable GPU acceleration
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-infobars")
+
         # add user agent
         options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36')
         options.add_argument("--start-maximized")
